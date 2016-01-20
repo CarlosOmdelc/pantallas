@@ -1,0 +1,89 @@
+<div ng-controller="homeController as vm">
+	<section layout flex>
+		<md-sidenav md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left" md-component-id="sideMenu">
+			<md-toolbar layout-padding>
+				<h2 class="md-toolbar-tools">
+					<div class="avatar-picture"></div>
+				</h2>
+				<h3 class="md-toolbar-tools">Adrián Salinas Basave</h3>
+				<h4 class="md-toolbar-tools">adrian@basave.com</h4>
+			</md-toolbar>
+			<md-content layout-padding>
+				<div layout="column" layout-align="center start" flex>
+					<md-button class="md-primary">
+						<md-icon md-font-set="material-icons">timeline</md-icon>
+						Dashboard
+					</md-button>
+					<md-button class="md-primary">
+						<md-icon md-font-set="material-icons">flag</md-icon>
+						Arranque rápido
+					</md-button>
+					<md-button class="md-primary">
+						<md-icon md-font-set="material-icons">person_add</md-icon>
+						Nuevo prospecto
+					</md-button>
+					<md-button class="md-primary">
+						<md-icon md-font-set="material-icons">group</md-icon>
+						Equipo
+					</md-button>
+					<md-button class="md-primary">
+						<md-icon md-font-set="material-icons">report</md-icon>
+						Ajustes
+					</md-button>
+				</div>
+			</md-content>
+		</md-sidenav>
+		<md-content flex>
+			<md-toolbar class="md-toolbar-menu" flex>
+				<div layout flex>
+					<div layout="column" flex>
+						<div hide-gt-md>
+							<md-button class="md-icon-button" ng-click="vm.toggleSidemenu()">
+								<md-icon md-font-set="material-icons">chevron_right</md-icon>
+							</md-button>
+						</div>
+						<div layout flex>
+							<div layout layout-align="start center" flex="80">
+								<h2 class="md-toolbar-tools">Enrique Fabritzio Villegas Saucedo</h2>
+							</div>
+							<div layout layout-align="end center" flex="20">
+								<md-button class="md-icon-button">
+									<i class="material-icons">search</i>
+								</md-button>
+								<md-button class="md-icon-button">
+									<i class="material-icons">more_vert</i>
+								</md-button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</md-toolbar>
+			<md-tabs md-dynamic-height md-border-bottom>
+				<md-tab>
+					<md-tab-label>
+						perfil
+					</md-tab-label>
+					<md-tab-body>
+						<div class="childView" ui-view="profile"></div>
+					</md-tab-body>
+				</md-tab>
+				<md-tab>
+					<md-tab-label>
+						recluta
+					</md-tab-label>
+					<md-tab-body>
+						<div class="childView" ui-view="recruit"></div>
+					</md-tab-body>
+				</md-tab>
+				<md-tab>
+					<md-tab-label>
+						desarrollo
+					</md-tab-label>
+					<md-tab-body>
+						<div class="childView" ui-view="development"></div>
+					</md-tab-body>
+				</md-tab>
+			</md-tabs>
+		</md-content>
+	</section>
+</div>

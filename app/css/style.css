@@ -2,3 +2,20 @@ body{
   margin: 0;
   padding: 0;
 }
+
+
+/* profile view */
+
+.avatar-picture {
+	background-image: url( ../images/avatar-example.jpeg );
+	background-position: center center;
+	background-size: cover;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.md-toolbar-tools {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}

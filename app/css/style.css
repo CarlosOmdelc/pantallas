@@ -3,6 +3,10 @@ body{
   padding: 0;
 }
 
+.clickable{
+	cursor: pointer;
+}
+
 
 /* profile view */
 
@@ -19,3 +23,98 @@ body{
 	margin-top: 5px !important;
 	margin-bottom: 5px !important;
 }
+
+
+/* agent profile view */
+	.agent-photo{
+		width: 100%;
+		max-width: 175px;
+		height: auto;
+		background-image: url( ../images/smith.png );
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.remove-margin{
+		margin: 0 !important;
+	}
+
+	md-tabs-content-wrapper{
+		background-color: #EBEAEA;
+	}
+
+	.detail-label{
+		color: #A7A7A7;
+		line-height: 1;
+		font-size: 12px;
+	}
+
+	md-list-item .md-no-style.md-button {
+		/* fix */
+		padding: 0;
+	}
+
+	.detail-text{
+		line-height: 1;
+		font-size: 14px;
+		margin-top: 6px;
+		margin-bottom: 12px
+	}
+
+	.animated {
+		transition: all linear 0.1s;
+	}
+
+	/* style for list element that is editable */
+		/* info details */
+		.animate-details {
+			opacity: 1;
+		}
+
+		.animate-details.ng-hide-add, .animate-details.ng-hide-remove {
+			transition: all linear 0.1s;
+		}
+
+		.animate-details.ng-hide {
+			opacity: 0;
+		}
+		/* inputs */
+		.animate-inputs {
+			opacity: 1;
+			height: 315px;
+			max-height: 425px;
+		}
+
+		.animate-inputs.ng-hide-add, .animate-inputs.ng-hide-remove {
+			transition: all linear 0.1s;
+		}
+
+		.animate-inputs.ng-hide {
+			height: 0px;
+			opacity: 0;
+		}
+		/* list item selected */
+			.is-selected {
+				width: 100%;
+				background-color: #6C6C6C;
+			}
+
+			.is-selected label{
+				color: #BABABA;
+			}
+
+			.is-selected p {
+				color: #FFFFFF;
+			}
+
+			.is-selected md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+				border-color: #EFDF26;
+			}
+
+			.is-selected md-input-container .md-input {
+				color: #FFFFFF;
+			}
+
+			.is-selected md-input-container:not(.md-input-invalid).md-input-focused label{
+				color: #EFDF26;
+			}

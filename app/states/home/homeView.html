@@ -33,8 +33,8 @@
 				</div>
 			</md-content>
 		</md-sidenav>
-		<md-content flex>
-			<md-toolbar class="md-toolbar-menu" flex>
+		<md-content flex style="max-height: 100vh; height: 100vh">
+			<md-toolbar class="md-toolbar-menu" flex style="height: 10vh">
 				<div layout flex>
 					<div layout="column" flex>
 						<div hide-gt-md>
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</md-toolbar>
-			<div class="childView" ui-view="">
+			<div class="childView" ui-view="" style="height: 90vh; overflow: auto;">
 		</md-content>
 	</section>
 </div>

@@ -1,7 +1,7 @@
 <div ng-controller="agentProfileController as vm" ng-cloak>
 	<md-card>
 		<md-card-content style="padding: 0;">
-			<md-list style="padding: 0px;">
+			<md-list>
 				<md-list-item ng-dblclick="vm.editThis( 'informacion-personal' )" style="cursor: pointer; padding: 0px;" class="animated">
 					<div layout="column" flex>
 						<div id="informacion-personal-inputs" class="animate-inputs is-selected" ng-show="vm.sections[0].editable" click-outside="vm.closeThis( 'informacion-personal' )" layout layout-padding>

@@ -6,7 +6,7 @@
   "dependencies": {
     "angular": ">=1.4.0",
     "angular-ui-router": ">=0.2.11",
-    "angular-material": "~1.0.1",
+    "angular-material": "^1.0.5",
     "angular-click-outside": "~2.2.1"
   },
   "version": "0.1.0",

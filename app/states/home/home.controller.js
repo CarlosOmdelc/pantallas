@@ -1,8 +1,8 @@
 angular.module( 'moose' ).controller( 'homeController', homeController );
 
-homeController.$inject  = [ 'homeModel', '$mdSidenav' ];
+homeController.$inject  = [ '$mdSidenav' ];
 
-function homeController( homeModel, $mdSidenav ) {
+function homeController( $mdSidenav ) {
 
 	var vm = this;
 

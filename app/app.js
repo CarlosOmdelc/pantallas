@@ -12,7 +12,7 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 		url: '/home',
 		views: {
 			'': { /* no caracter ni espacios coloca esta view como la default */
-				templateUrl: 'states/home/homeView.html',
+				templateUrl: 'states/home/home.view.html',
 				controller: 'homeController'
 			}
 		}
@@ -29,6 +29,10 @@ config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $url
 				templateUrl: 'states/agent/profile/agent.profile.view.html',
 				controller: 'agentProfileController'
 			},
+			'recruit@agent': {
+				templateUrl: 'states/agent/recruit/agent.recruit.view.html',
+				controller: 'agentRecruitController'
+			}
 		}
 	});
 }]);

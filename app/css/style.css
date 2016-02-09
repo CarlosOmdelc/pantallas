@@ -7,6 +7,10 @@ body{
 	cursor: pointer;
 }
 
+.tab-fix {
+	max-height: 85vh;
+	height: 100vh !important;
+}
 
 /* profile view */
 
@@ -15,8 +19,8 @@ body{
 	background-position: center center;
 	background-size: cover;
 	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+	width: 40px;
+	border-radius: 50px;
 }
 
 .md-toolbar-tools {

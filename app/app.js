@@ -3,10 +3,61 @@ angular.module( 'moose', [
   'ngMaterial',
   'angular-click-outside'
 ]).
-config( [ '$stateProvider', '$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
+config( [ '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function( $stateProvider, $urlRouterProvider, $mdThemingProvider ) {
 
+	/*
+	configuracion del tema
+	requiere mdThemingProvider
+	*/
+
+	$mdThemingProvider.definePalette('main', {
+		'50': '#fcfeff',
+		'100': '#b0e4ff',
+		'200': '#78d1ff',
+		'300': '#30b8ff',
+		'400': '#12aeff',
+		'500': '#009ff2',
+		'600': '#008bd3',
+		'700': '#0077b5',
+		'800': '#006396',
+		'900': '#004f78',
+		'A100': '#fcfeff',
+		'A200': '#b0e4ff',
+		'A400': '#12aeff',
+		'A700': '#0077b5',
+		'contrastDefaultColor': 'light',
+		'contrastDarkColors': '50 100 200 300 400 A100 A200 A400'
+	});
+
+	$mdThemingProvider.definePalette('accent', {
+		'50': '#ffffff',
+		'100': '#fffbfc',
+		'200': '#ffc3d8',
+		'300': '#ff7ba9',
+		'400': '#ff5d95',
+		'500': '#ff3e81',
+		'600': '#ff1f6d',
+		'700': '#ff0159',
+		'800': '#e1004e',
+		'900': '#c30044',
+		'A100': '#ffffff',
+		'A200': '#fffbfc',
+		'A400': '#ff5d95',
+		'A700': '#ff0159',
+		'contrastDefaultColor': 'light',
+		'contrastDarkColors': '50 100 200 300 400 A100 A200 A400'
+	});
+
+	$mdThemingProvider.theme( 'moose' )
+	.primaryPalette( 'main' )
+    .accentPalette( 'pink' );
+
+	$mdThemingProvider.setDefaultTheme( 'moose' );
+
+	/*
+	Rutas y estados
+	*/
 	$urlRouterProvider.otherwise( 'home' );
-
 	$stateProvider.
 	state( 'home', {
 		url: '/home',

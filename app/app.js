@@ -68,6 +68,40 @@ config( [ '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function
 			}
 		}
 	}).
+
+  state( 'kickstart',{
+    parent: 'home',
+    url: '/arranque_rapido',
+    views: {
+      '':{
+        templateUrl: 'states/kickstart/kickstart.view.html',
+        controller: 'kickstartController'
+      }
+    }
+  }).
+
+  state( 'new_prospects', {
+      parent: 'home',
+      url: '/nuevo_prospecto',
+      views: {
+        '': {
+          templateUrl:  'states/new_prospects/new_prospects.view.html',
+          controller: 'new_prospectsController'
+        }
+      }
+    }).
+
+    state( 'team',{
+      parent: 'home',
+      url: '/team',
+      views: {
+        '':{
+          templateUrl: 'states/team/team.view.html',
+          controller: 'teamController'
+        }
+      }
+    }).
+
 	state( 'agent', {
 		parent: 'home',
 		url: '/agent', /* se le suma al url del padre = '/home' + '/agent' */
@@ -86,4 +120,9 @@ config( [ '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function
 			}
 		}
 	});
+
+
+
+
+
 }]);

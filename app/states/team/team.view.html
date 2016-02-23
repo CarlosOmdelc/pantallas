@@ -1,0 +1,71 @@
+<div ng-controller="teamController as vm">
+  <md-card>
+   <!-- <img src="card-image.png" class="md-card-image" alt="image caption"> -->
+   <md-card-header>
+     <div layout flex>
+       <div layout layout-align="start center" flex="80">
+         <h1 class="md-toolbar-tools">Equipo</h1>
+       </div>
+       <div layout layout-align="end center" flex="20">
+         <md-button class="md-icon-button" ng-click="vm.click(true)">
+           <i class="material-icons">search</i>
+         </md-button>
+         <md-button class="md-icon-button">
+           <i class="material-icons">close</i>
+         </md-button>
+       </div>
+     </div>
+   </md-card-header>
+   <md-card-content>
+     <md-list >
+       <md-subheader class="md-no-sticky">
+         <div layout layout-align="start center">
+           <div flex="10" layout layout-align="start center"> Foto </div>
+           <div flex="20" layout layout-align="start center"> Nombre
+             <md-button class="md-icon-button" ng-click="vm.click(true)">
+               <!--<button ng-click="order('phone')">Phone Number</button>
+         <span class="sortorder" ng-show="predicate === 'phone'" ng-class="{reverse:reverse}"></span>-->
+               <i class="material-icons">arrow_upward</i>
+             </md-button></div>
+           <div flex="20" layout layout-align="start center"> Último Proceso </div>
+           <div flex="10" layout layout-align="center center"> Duración </div>
+           <div flex="20" layout layout-align="center center"> Fecha de Proceso </div>
+           <div flex="20" layout layout-align="center center"> Teléfono </div>
+         </div>
+       </md-subheader>
+       <!--se termina subheader y empieza la lista -->
+       <md-divider></md-divider>
+      <md-list-item ng-repeat="equipo in vm.equipo | orderBy: vm:reverse">
+        <!--<tr ng-repeat="friend in friends | orderBy:predicate:reverse">-->
+        <div flex="100" layout layout-align="start center">
+          <div flex="10" layout layout-align="start center">
+            <!--<p> {{ equipo.Nombre }} </p>-->
+            <div class="avatar-picture"></div>
+          </div>
+          <div flex="20" layout layout-align="start center">
+            <p>{{equipo.Nombre}}</p>
+          </div>
+          <div flex="20" layout layout-align="start center">
+            <p> {{ equipo.UP }} </p>
+          </div>
+          <div flex="10" layout layout-align="center center">
+            <p> {{ equipo.Duracion }} </p>
+          </div>
+          <div flex="20" layout layout-align="center center">
+            <p> {{ equipo.FechaP }} </p>
+          </div>
+          <div flex="20" layout layout-align="center center">
+            <p> {{ equipo.Telefono }} </p>
+          </div>
+        </div>
+        <md-divider></md-divider>
+      </md-list-item>
+
+         <!-- <div layout="column"> -->
+           <!-- <div flex>First item in column</div> -->
+           <!-- <div flex>Second item in column</div> -->
+        <!-- </div> -->
+        </md-list>
+   </md-card-content>
+  </md-card>
+</div>

@@ -1,0 +1,48 @@
+<div ng-controller="kickstartController as vm">
+<md-card>
+ <!-- <img src="card-image.png" class="md-card-image" alt="image caption"> -->
+ <md-card-content>
+   <h1>Arranque Rápido</h1>
+   <md-list >
+     <!-- <h2>Arranque Rápido</h2> -->
+     <!-- <> -->
+     <md-subheader class="md-no-sticky">
+       <div layout layout-align="start center">
+         <div flex="33" layout layout-align="start center"> Nombre
+           <md-button class="md-icon-button" ng-click="vm.click(true)">
+             <i class="material-icons">arrow_upward</i>
+           </md-button></div>
+         <div flex="33" layout layout-align="center center"> Curso </div>
+         <div flex="33" layout layout-align="end center"> Asistencia </div>
+       </div>
+     </md-subheader>
+     <!--se termina subheader y empieza la lista -->
+     <md-divider></md-divider>
+    <md-list-item ng-repeat="topping in vm.toppings | orderBy: 'name'">
+      <div flex="100" layout layout-align="start center">
+        <div flex="33" layout layout-align="start center">
+          <p> {{ topping.name }} </p>
+        </div>
+        <div flex="33" layout layout-align="center center">
+          <p>{{topping.contact}}</p>
+        </div>
+        <div flex="33" layout layout-align="end center">
+          <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+        </div>
+      </div>
+
+
+
+
+      <md-divider></md-divider>
+    </md-list-item>
+
+       <!-- <div layout="column"> -->
+         <!-- <div flex>First item in column</div> -->
+         <!-- <div flex>Second item in column</div> -->
+      <!-- </div> -->
+      </md-list>
+ </md-card-content>
+</md-card>
+
+</div>

@@ -1,0 +1,125 @@
+<div ng-controller="ag3Controller as vm">
+  <h1>Hola mundo</h1>
+  <md-card>
+    <h1>Hola mundo</h1>
+    <md-card-header>
+      <div layout flex>
+        <div layout layout-align="start center" flex="80">
+          <h1 class="md-toolbar-tools">AG3</h1>
+        </div>
+        <div layout layout-align="end center" flex="20">
+          <md-button class="md-icon-button" ng-click="vm.click(true)">
+            <i class="material-icons">search</i>
+          </md-button>
+          <md-button class="md-icon-button">
+            <i class="material-icons">close</i>
+          </md-button>
+        </div>
+      </div>
+    </md-card-header>
+    <md-card-content>
+      <div layout flex>
+        <h2>AG3 CONSULTA</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="center center" flex="100">
+          <!--Grafica de contactos-->
+        </div>
+      </div>
+      <div layout flex>
+        <h2>SEMANAS ACTUALES</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="start center" flex="50">
+          <!--Lista por crear-->
+          <md-list>
+            <md-subheader class="md-no-sticky">
+              <div layout layout-align="start center">
+                <div flex="50" layout layout-align="start center"> Parametro </div>
+                <div flex="25" layout layout-align="start center"> Actual</div>
+                <div flex="25" layout layout-align="start center"> Pasada </div>
+              </div>
+            </md-subheader>
+            <!--se termina subheader y empieza la lista -->
+            <md-divider></md-divider>
+           <md-list-item ng-repeat>
+             <!--<tr ng-repeat="friend in friends | orderBy:predicate:reverse">-->
+             <div flex="100" layout layout-align="start center">
+               <div flex="50" layout layout-align="start center">
+                 <p> {{ lissemana.parametro }} </p>
+               </div>
+               <div flex="25" layout layout-align="start center">
+                 <p>{{lissemana.actual}}</p>
+               </div>
+               <div flex="25" layout layout-align="start center">
+                 <p> {{ lissemana.pasada }} </p>
+               </div>
+             </div>
+             <md-divider></md-divider>
+           </md-list-item>
+         </md-list>
+        </div>
+        <h2>ESTADISTICAS ACTUALES</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="end center" flex="50">
+          <!--Grafica de barras horizontales-->
+        </div>
+      </div>
+      <div layout flex>
+        <h2>DESEMPEÑO</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="center center" flex="100">
+          <!--Grafica de procentajes-->
+        </div>
+      </div>
+      <div layout flex>
+        <h2>GENERAL</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="start center" flex="50">
+          <!--Lista por crear-->
+          <md-list>
+            <md-subheader class="md-no-sticky">
+              <div layout layout-align="start center">
+                <div flex="50" layout layout-align="start center"> Parametro </div>
+                <div flex="25" layout layout-align="start center"> Suma</div>
+                <div flex="25" layout layout-align="start center"> Promedio </div>
+              </div>
+            </md-subheader>
+            <!--se termina subheader y empieza la lista -->
+            <md-divider></md-divider>
+           <md-list-item ng-repeat>
+             <!--<tr ng-repeat="friend in friends | orderBy:predicate:reverse">-->
+             <div flex="100" layout layout-align="start center">
+               <div flex="50" layout layout-align="start center">
+                 <p> {{ lissemana.parametro }} </p>
+               </div>
+               <div flex="25" layout layout-align="start center">
+                 <p>{{lissemana.suma}}</p>
+               </div>
+               <div flex="25" layout layout-align="start center">
+                 <p> {{ lissemana.promedio }} </p>
+               </div>
+             </div>
+             <md-divider></md-divider>
+           </md-list-item>
+         </md-list>
+        </div>
+        <h2>SCORE</h2>
+        <md-divider></md-divider>
+        <div layout layout-align="end center" flex="50">
+          <!--promedios-->
+          <div md-whiteframe="3" layout layout-align="center center">
+            <span>
+              Puntos promedio semanales
+            </span>
+          </div>
+          <div md-whiteframe="3" layout layout-align="center center">
+            <span>
+              Puntos promedio diarios
+            </span>
+          </div>
+        </div>
+      </div>
+      <h1>Hola mundo</h1>
+    </md-card-content>
+    <h1>Hola mundo</h1>
+ </md-card>
+</div>

@@ -3,6 +3,13 @@ body{
   padding: 0;
 }
 
+/* Estilos generales
+************************************************/
+.grey-background {
+	background-color: rgba( 0, 0, 0, 0.20 ) !important;
+}
+
+
 .clickable{
 	cursor: pointer;
 }
@@ -138,4 +145,16 @@ md-tabs.md-moose-theme md-tabs-wrapper{
 
 md-tabs.md-moose-theme .md-tab.md-active, md-tabs.md-moose-theme .md-tab.md-active md-icon, md-tabs.md-moose-theme .md-tab.md-focused, md-tabs.md-moose-theme .md-tab.md-focused md-icon {
     color: rgb( 255, 255, 255 );
+}
+.detail-label{
+color: #A7A7A7;
+line-height: 1;
+font-size: 12px;
+}
+
+.detail-text{
+line-height: 1;
+font-size: 14px;
+margin-top: 6px;
+margin-bottom: 12px
 }

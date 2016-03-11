@@ -112,6 +112,39 @@ config( [ '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function
     }
   }).
 
+  state('ag3nuevo', {
+    parent: 'home',
+    url: '/ag3nuevo',
+    views: {
+      '': {
+        templateUrl: 'states/ag3nuevo/ag3nuevo.view.html',
+        controller: 'ag3nuevoController'
+      }
+    }
+  }).
+
+  state('oia', {
+    parent: 'home',
+    url: '/oia',
+    views: {
+      '': {
+        templateUrl: 'states/OIA/oia.view.html',
+        controller: 'oiaController'
+      }
+    }
+  }).
+
+  state('compromisos', {
+    parent: 'home',
+    url: '/compromisos',
+    views: {
+      '': {
+        templateUrl: 'states/compromisos/compromisos.view.html',
+        controller: 'compromisosController'
+      }
+    }
+  }).
+
 	state( 'agent', {
 		parent: 'home',
 		url: '/agent', /* se le suma al url del padre = '/home' + '/agent' */

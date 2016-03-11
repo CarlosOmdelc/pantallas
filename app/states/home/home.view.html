@@ -33,32 +33,13 @@
 				</div>
 			</md-content>
 		</md-sidenav>
-		<md-content flex style="max-height: 100vh; height: 100vh">
-			<md-toolbar class="md-toolbar-menu" flex style="height: 100px">
-				<div layout flex>
-					<div layout="column" flex>
-						<div hide-gt-md>
-							<md-button class="md-icon-button" ng-click="vm.toggleSidemenu()">
-								<md-icon md-font-set="material-icons">chevron_right</md-icon>
-							</md-button>
-						</div>
-						<div layout flex>
-							<div layout layout-align="start center" flex="80">
-								<h2 class="md-toolbar-tools">Enrique Fabritzio Villegas Saucedo</h2>
-							</div>
-							<div layout layout-align="end center" flex="20">
-								<md-button class="md-icon-button">
-									<i class="material-icons">search</i>
-								</md-button>
-								<md-button class="md-icon-button">
-									<i class="material-icons">more_vert</i>
-								</md-button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</md-toolbar>
-			<div class="childView" ui-view="" style="height: 85vh; overflow: auto;">
+		<md-content flex style="max-height: 100vh; height: 100vh"  class="grey-background">
+					<md-toolbar  hide-gt-md style="min-height: 20px">
+						<md-button class="md-icon-button" ng-click="vm.toggleSidemenu()">
+							<md-icon md-font-set="material-icons">menu</md-icon>
+						</md-button>
+					</md-toolbar>
+					<div class="childView" ui-view="" style="height: 100vh; max-height: 100vh; overflow: auto;">
 		</md-content>
 	</section>
 </div>

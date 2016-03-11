@@ -1,7 +1,18 @@
 <div ng-controller="ag3Controller as vm">
+  <md-toolbar  style="height: 149px;">
+    <div layout flex>
+      <div layout layout-align="start center" flex="80">
+        <h2 class="md-toolbar-tools">Fernando Garza Ayala</h2>
+      </div>
+      <div layout layout-align="end center" flex="20">
+        <md-button class="md-icon-button">
+          <md-icon md-font-set="material-icons">search</i>
+        </md-button>
+      </div>
+    </div>
+  </md-toolbar>
   <md-card>
-    <md-card-header>
-      <div layout flex>
+    <md-card-header layout flex>
         <div layout layout-align="start center" flex="80">
           <h1 class="md-toolbar-tools">AG3</h1>
         </div>
@@ -13,58 +24,50 @@
             <i class="material-icons">close</i>
           </md-button>
         </div>
-      </div>
     </md-card-header>
     <md-card-content>
      <h6>AG3 CONSULTA</h6>
       <div flex="100" layout layout-align="start center">
-        <div layout layout-align="center center" flex="100">
+        <div layout layout-align="start center" flex="100">
           <!--Grafica de contactos-->
         </div>
       </div>
       <md-divider></md-divider>
-      <div layout layout-align="start center" flex="100">
-        <div layout layout-align="center center" flex="40">
+      <div layout layout-align="center start" flex="100">
+        <div layout layout-align="start start" flex="45">
             <h6>SEMANAS ACTUALES</h6>
         </div>
-        <div layout layout-align="end center" flex="10">
-            <!--Vacio para la separación-->
-        </div>
-        <div layout layout-align="center center" flex="40">
+        <div layout layout-align="start start" flex="45" flex-offset="10">
             <h6>ESTADISTICAS ACTUALES</h6>
         </div>
       </div>
           <md-divider></md-divider>
-      <div layout layout-align="center center" flex="100">
-        <div layout layout-align="start center" flex="50">
-          <!--Lista por crear-->
-          <md-list>
+      <div layout layout-align="start start" flex="100">
+          <!--Lista semanas actuales-->
+          <md-list flex="45">
             <md-subheader class="md-no-sticky">
-              <div flex="100" layout layout-align="start center">
-                <div flex="50" layout layout-align="start center"> Parametro </div>
-                <div flex="25" layout layout-align="start center"> Actual</div>
-                <div flex="25" layout layout-align="start center"> Pasado </div>
+              <div layout="rows"  flex layout layout-align="start start">
+                <div flex="60" layout layout-align="start start"> Parametro </div>
+                <div flex="20" layout layout-align="center start"> Actual</div>
+                <div flex="20" layout layout-align="center start"> Pasado </div>
               </div>
             </md-subheader>
             <!--se termina subheader y empieza la lista -->
            <md-list-item ng-repeat="lissemana in vm.lissemana">
              <!--<tr ng-repeat="friend in friends | orderBy:predicate:reverse">-->
-             <div flex="100" layout layout-align="start center">
-               <div flex="50" layout layout-align="start center">
+               <div flex="60" layout layout-align="start start">
                  <p> {{ lissemana.Parametro }} </p>
                </div>
-               <div flex="25" layout layout-align="start center">
+               <div flex="20" layout layout-align="center start">
                  <p>{{lissemana.Actual}}</p>
                </div>
-               <div flex="25" layout layout-align="start center">
+               <div flex="20" layout layout-align="center start">
                  <p> {{ lissemana.Pasado }} </p>
                </div>
-             </div>
              <md-divider></md-divider>
            </md-list-item>
          </md-list>
-        </div>
-        <div layout layout-align="end center" flex="50">
+        <div layout layout-align="start start" flex="45" flex-offset="10">
           <!--Grafica de barras horizontales-->
         </div>
       </div>
@@ -75,48 +78,41 @@
           <!--Grafica de procentajes-->
         </div>
       </div>
-      <div layout layout-align="start center" flex="100">
-        <div layout layout-align="center center" flex="40">
+      <div layout layout-align="start start" flex="100">
+        <div layout layout-align="start start" flex="45">
             <h6>GENERAL</h6>
         </div>
-        <div layout layout-align="end center" flex="10">
-            <!--Vacio para la separación-->
-        </div>
-        <div layout layout-align="center center" flex="40">
+        <div layout layout-align="start start" flex="45" flex-offset="10">
             <h6>SCORE</h6>
         </div>
       </div>
       <md-divider></md-divider>
-      <div layout flex="100">
-        <div layout layout-align="start center" flex="50">
-          <!--Lista por crear-->
-          <md-list>
+      <div layout layout-align="start start" flex="100">
+          <!--Lista semanas actuales-->
+          <md-list flex="45">
             <md-subheader class="md-no-sticky">
-              <div flex="100" layout layout-align="start center">
-                <div flex="50" layout layout-align="start center"> Parametro </div>
-                <div flex="25" layout layout-align="start center"> Suma</div>
-                <div flex="25" layout layout-align="start center"> Promedio </div>
+              <div layout="rows"  flex layout layout-align="start start">
+                <div flex="60" layout layout-align="start start"> Parametro </div>
+                <div flex="20" layout layout-align="center start"> Actual</div>
+                <div flex="20" layout layout-align="center start"> Pasado </div>
               </div>
             </md-subheader>
             <!--se termina subheader y empieza la lista -->
            <md-list-item ng-repeat="lissemana in vm.lissemana">
              <!--<tr ng-repeat="friend in friends | orderBy:predicate:reverse">-->
-             <div flex="100" layout layout-align="start center">
-               <div flex="50" layout layout-align="start center">
+               <div flex="60" layout layout-align="start start">
                  <p> {{ lissemana.Parametro }} </p>
                </div>
-               <div flex="25" layout layout-align="start center">
+               <div flex="20" layout layout-align="center start">
                  <p>{{lissemana.Suma}}</p>
                </div>
-               <div flex="25" layout layout-align="start center">
+               <div flex="20" layout layout-align="center start">
                  <p> {{ lissemana.Promedio }} </p>
                </div>
-             </div>
              <md-divider></md-divider>
            </md-list-item>
          </md-list>
-        </div>
-        <div layout layout-align="start center" flex="50">
+        <div layout layout-align="end start" flex="45" flex-offset="10">
           <!--promedios-->
           <md-content class="md-padding" layout-xs="column" layout="row">
             <div layout="column">
@@ -132,13 +128,14 @@
                 <md-card-title>
                   <md-card-title-text>
                     <span class="md-headline">≈55</span>
-                    <span class="md-subhead">Puntos promedio semanales</span>
+                    <span class="md-subhead">Puntos promedio diarios</span>
                   </md-card-title-text>
                 </md-card-title>
               </md-card>
             </md-content>
           </div>
         </div>
+      </div>
       </md-card-content>
  </md-card>
 </div>

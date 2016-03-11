@@ -1,0 +1,94 @@
+<div ng-controller="ag3nuevoController as vm">
+  <md-toolbar  style="height: 149px;">
+    <div layout flex>
+      <div layout layout-align="start center" flex="80">
+        <h2 class="md-toolbar-tools">Fernando Garza Ayala</h2>
+      </div>
+      <div layout layout-align="end center" flex="20">
+        <md-button class="md-icon-button">
+          <md-icon md-font-set="material-icons">search</i>
+        </md-button>
+      </div>
+    </div>
+  </md-toolbar>
+  <md-card>
+    <md-card-header>
+      <div layout flex>
+        <div layout layout-align="start center" flex="60">
+          <h1 class="md-toolbar-tools">AG3 Nuevo</h1>
+        </div>
+        <div layout layout-align="end center" flex="40">
+          <md-button class="md-icon-button">
+            <i class="material-icons">close</i>
+          </md-button>
+        </div>
+      </div>
+    </md-card-header>
+    <md-divider></md-divider>
+    <md-card-content>
+      <div layout flex layout layout-align="start center" flex="100">
+            <h6>PROSPECTACIÓN</h6>
+      </div>
+        <div layout="row">
+            <md-input-container flex="20">
+              <label>Referidos</label>
+              <input ng-model="vm.nuevo.referidos"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Llamadas</label>
+              <input ng-model="vm.nuevo.llamadas"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Contactos</label>
+              <input ng-model="vm.nuevo.contactos"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Citas</label>
+              <input ng-model="vm.nuevo.citas"><hr/>
+            </md-input-container>
+        </div>
+
+        <div layout flex layout layout-align="start center" flex="100">
+              <h6>PRODUCTIVIDAD</h6>
+        </div>
+        <div layout="row">
+            <md-input-container flex="20">
+              <label>Entrevistas Iniciales</label>
+              <input ng-model="vm.nuevo.eini"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Entrevistas de Cierre</label>
+              <input ng-model="vm.nuevo.ecierre"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Total Horas Venta</label>
+              <input ng-model="vm.nuevo.tventa"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Solicitudes Ingresadas</label>
+              <input ng-model="vm.nuevo.singresadas"><hr/>
+            </md-input-container>
+        </div>
+
+        <div layout layout-align="center start" flex="100">
+          <div layout flex layout layout-align="start center" flex="50">
+                <h6>RESULTADOS FINALES</h6>
+          </div>
+          <div layout layout-align="start start" flex="50">
+              <h6>SCORE</h6>
+          </div>
+        </div>
+        <div layout layout-align="start center" flex="100">
+            <md-input-container flex="20">
+              <label>Comisiones 1er Año</label>
+              <input ng-model="vm.nuevo.comisiones"><hr/>
+            </md-input-container>
+            <md-input-container flex="20" flex-offset="5">
+              <label>Polizas Pagadas</label>
+              <input ng-model="vm.nuevo.ppagadas"><hr/>
+            </md-input-container>
+            <span flex="20" flex-offset="5" style="height:68px;">Nan Puntos Totales</span>
+            <span flex></span>
+    </md-card-content>
+  </md-card>
+</div>

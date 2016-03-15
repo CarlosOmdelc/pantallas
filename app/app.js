@@ -134,6 +134,28 @@ config( [ '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function
     }
   }).
 
+  state('oialista', {
+    parent: 'home',
+    url: '/oialista',
+    views: {
+      '': {
+        templateUrl: 'states/OIALista/oialista.view.html',
+        controller: 'oialistaController'
+      }
+    }
+  }).
+
+  state('oiaconsulta', {
+    parent: 'home',
+    url: '/oiaconsulta',
+    views:{
+      '': {
+        templateUrl: 'states/OIAConsulta/oiaconsulta.view.html',
+        controller: 'oiaconsultaController'
+      }
+    }
+  }).
+
   state('compromisos', {
     parent: 'home',
     url: '/compromisos',
